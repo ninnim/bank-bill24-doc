@@ -41,12 +41,12 @@ tags:
     description: Balance Inquiry
 
 servers:
-  - url: https://bankapi-demo.bill24.net/
+  - url: https://{bankapi}
     variables:
-      tenant:
+      bankapi:
         default: www
-        description: Your tenant id
-  - url: https://bankapi-demo.bill24.net/payment/v4/inquiry
+        description: Your bankapi id
+  - url: https://bankapi-demo.bill24.net
 paths:
   /inquiry:
     $ref: paths/inquiry.yaml
