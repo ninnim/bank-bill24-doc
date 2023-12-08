@@ -249,19 +249,20 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: https://example.com/api/oauth/dialog
+          authorizationUrl: http://example.com/api/oauth/dialog
           scopes:
             read:users: read users info
             write:users: modify or remove users
     api_key:
       type: apiKey
       in: header
-      name: api_key
+      name: token
     basic_auth:
-      type: https
+      type: http
       scheme: basic
     BearerAuth:            
-      type: https
+      type: http
       scheme: bearer
 
+        
 security: []
