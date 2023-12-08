@@ -1,6 +1,6 @@
 post:
   tags:
-    - Balance Inquiry
+    - Authorization
   summary: ​​​ 
   description: |
     We use this endpoint to check bill detail or customer info.  
@@ -18,7 +18,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/inquiry.yaml
+          $ref: ../components/schemas/authorize.yaml
     description: requestBody description
     required: true
   responses:
@@ -35,6 +35,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/inquiry.yaml
+            $ref: ../components/schemas/authorize.yaml
     '400':
       $ref: ../components/responses/Problem.yaml

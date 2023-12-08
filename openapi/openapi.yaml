@@ -233,6 +233,8 @@ servers:
         description: Your bankapi id
   - url: https://bankapi-demo.bill24.net
 paths:
+  /authorize:
+    $ref: paths/authorize.yaml
   /inquiry:
     $ref: paths/inquiry.yaml
   /users/{username}:
