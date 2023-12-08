@@ -1,0 +1,35 @@
+post:
+  tags:
+    - Verify bill/ transaction
+  summary: qr/v2/verify
+  description: |
+    **Acquiring Bank / Issuing Bank** able to verify bill before submit payment or verify transaction after payment.
+    
+  operationId: qr/verify
+  security:
+    - api_key: []
+    - basic_auth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/verify.yaml
+    description: requestBody description
+    required: true
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Rate-Limit:
+          description: Calls per hour allowed by the user.
+          schema:
+            type: integer
+            format: int32
+        X-Expires-After:
+          $ref: ../components/headers/ExpiresAfter.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/verify.yaml
+    '400':
+      $ref: ../components/responses/Problem.yaml

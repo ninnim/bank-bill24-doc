@@ -1,0 +1,35 @@
+post:
+  tags:
+    - Submit payment
+  summary: qr/v2/confirm
+  description: |
+    Acquiring Bank need to submit payment to Bill24 system after received payment instruction from Payment Network.
+    Issuing Bank able to submit payment to Bill24 system before send payment instruction to Payment Network (optional).  
+  operationId: qr/v2/confirm
+  security:
+    - api_key: []
+    - basic_auth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/confirm.yaml
+    description: requestBody description
+    required: true
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Rate-Limit:
+          description: Calls per hour allowed by the user.
+          schema:
+            type: integer
+            format: int32
+        X-Expires-After:
+          $ref: ../components/headers/ExpiresAfter.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/confirm.yaml
+    '400':
+      $ref: ../components/responses/Problem.yaml

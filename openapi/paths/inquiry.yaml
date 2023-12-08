@@ -1,0 +1,39 @@
+post:
+  tags:
+    - Balance Inquiry
+  summary:  payment/inquiry
+  description: |
+    We use this endpoint to check bill detail or customer info.  
+    There are 2 ways to check amount:
+     1. Check by bill number – to get amount of a bill.
+     2. Check by customer number – to get total amount of a customer
+    (Sum all bills amount of the custome
+
+  operationId: inquiry
+  security:
+    - api_key: []
+    - basic_auth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/inquiry.yaml
+    description: requestBody description
+    required: true
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Rate-Limit:
+          description: Calls per hour allowed by the user.
+          schema:
+            type: integer
+            format: int32
+        X-Expires-After:
+          $ref: ../components/headers/ExpiresAfter.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/inquiry.yaml
+    '400':
+      $ref: ../components/responses/Problem.yaml
