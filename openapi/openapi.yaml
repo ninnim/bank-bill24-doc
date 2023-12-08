@@ -214,7 +214,7 @@ info:
     We would like to schedule the go-live date for [Date]. %0D%0A %0D%0A
     Please let me know if this is possible and if you have any questions. %0D%0A %0D%0A
     Thank you for your time and consideration">email</a> to Bill24
-
+    
 
 
 tags:
@@ -257,6 +257,9 @@ components:
       type: apiKey
       in: header
       name: api_key
+    basic_auth:
+      type: http
+      scheme: basic
     BearerAuth:            
       type: http
       scheme: bearer

@@ -13,6 +13,7 @@ post:
   security:
     - api_key: []
     - basic_auth: []
+    - BearerAuth: []
   requestBody:
     content:
       application/json:
