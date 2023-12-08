@@ -126,7 +126,7 @@ info:
     <hr style="height:1px;">
 
     
-    # Customer Journey
+    ## Customer Journey
 
     <div>
     <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/Customer+Journey.svg">
@@ -150,7 +150,8 @@ info:
     <br> 
     <hr style="height:0.2px;">
 
-    # Authorization Proccess
+
+    ## Authorization Proccess
 
     <p align="center">
     <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/Diagram+Authorize.svg">
@@ -165,17 +166,22 @@ info:
     <br>
     <hr style="height:0.2px;">
 
-    # Roadmap
+
+    ## Roadmap
     
+
     <div>
     <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/RoadMap.jpeg">
     </div>
 
     <br>
 
+
     <span style="color: #4D8D6E">`1`</span> - Understanding API Spec, and start develop stystem (<span style="color: orange">Development at your side</span>)
 
+
     <span style="color: #4D8D6E">`2`</span>  - Test on development app by following Bill24's <a href="https://drive.google.com/drive/folders/12iAOLR4Sb67C5agjm4gQ01yUriNJdoRi?usp=drive_link">scenarios.</a>
+
 
     <span style="color: #4D8D6E">`3`</span>  - Pass testing result with <a href="mailto:support@ubill24.com?subject=UAT Sign-off [service name] [Bank Name]&body=Dear Bill24,%0D%0A %0D%0A
     Greeting from  [Bank name] %0D%0A %0D%0A
@@ -185,9 +191,12 @@ info:
     Thank you for your time and consideration
     ">attach file</a> for sign-off
 
+
     <span style="color: #4D8D6E">`4`</span>  - Configure VPN side to side with Bill24 team (VPN <span style="color: orange">not required</span> in testing environment)
 
+
     <span style="color: #4D8D6E">`5`</span>  - Testing on production evironment by following Bill24's <a href="https://drive.google.com/drive/folders/12iAOLR4Sb67C5agjm4gQ01yUriNJdoRi?usp=drive_link">scenarios.</a>
+
 
     <span style="color: #4D8D6E">`6`</span>  - Pass testing result with <a href="mailto:support@ubill24.com?subject=Production Sign-off [service name] [Bank Name]&body=Dear Bill24,%0D%0A %0D%0A
     Greeting from  [Bank name]%0D%0A %0D%0A
@@ -195,6 +204,7 @@ info:
     We have now completed the production environment. The results of the testing are attached to this email.%0D%0A %0D%0A
     Please review the attached results and let me know if you have any questions or concerns. Once you have approved the results, we can move forward with the launch of the service to market. %0D%0A %0D%0A
     Thank you for your time and consideration">attach file</a> for sign-off.
+
 
     <span style="color: #4D8D6E">`7`</span>  - Launch service, once you have completed the development of service, you can begin to promote it to potential customers and office <a href="mailto:support@ubill24.com?subject=Notify Launch [service name] [Bank Name]&body=Dear Bill24,%0D%0A %0D%0A
     Greeting from  [Bank name]%0D%0A %0D%0A
@@ -204,6 +214,7 @@ info:
     We would like to schedule the go-live date for [Date]. %0D%0A %0D%0A
     Please let me know if this is possible and if you have any questions. %0D%0A %0D%0A
     Thank you for your time and consideration">email</a> to Bill24
+    
 
 
 tags:
@@ -238,7 +249,7 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: https://bankapi-demo.bill24.net/
+          authorizationUrl: http://example.com/api/oauth/dialog
           scopes:
             read:users: read users info
             write:users: modify or remove users
@@ -249,7 +260,7 @@ components:
     basic_auth:
       type: http
       scheme: basic
-    BearerAuth:            # arbitrary name for the security scheme
+    BearerAuth:            
       type: http
       scheme: bearer
-      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+      bearerFormat: JWT    
