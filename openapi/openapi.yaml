@@ -21,6 +21,7 @@ info:
 
     To begin using the API, developers are required to register and obtain an authorization token. This token is essential for accessing and leveraging the API's capabilities.
 
+    <&nbsp;>
     <div style="display: flex; justify-content: center; align-items: center;">
     <p style="font-weight: bold; font-size: 30px;">Banks and FIs using Bill24</p>
     </div>
@@ -121,7 +122,89 @@ info:
     <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Woori.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
     </a>
     </div>
+
+    <hr style="height:1px;">
+
+    
+    # Customer Journey
+
+    <div>
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/Customer+Journey.svg">
+    </div>
+
+
+    <br>
+
+    <span style="color: #4D8D6E">`1`</span> - User goes to the payment menu in the Bank App and selects a category.
+
+    <span style="color: #4D8D6E">`2`</span> - User selects any merchant to make a payment.
+
+    <span style="color: #4D8D6E">`3`</span>  - User inputs the Consumer Code or Bill Code to search for a bill. (<a href="api-4022145">If the consumer edits the amount to pay.
+    </a>)
+    <span style="color: #4D8D6E">`4`</span>  - User confirms the information before clicking on the `Confirm Payment` button.
+
+    <span style="color: #4D8D6E">`5`</span>  - User enters PIN code
+
+    <span style="color: #4D8D6E">`6`</span>  - User can view screen  payment was successful.
+
+    <br> 
     <hr style="height:0.2px;">
+
+    # Authorization Proccess
+
+    <p align="center">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/Diagram+Authorize.svg">
+    </p>
+
+    # Integration Process
+
+    <div>
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/Diagram+Integrate.jpeg">
+    </div>
+
+    <br>
+    <hr style="height:0.2px;">
+
+    # Roadmap
+    
+    <div>
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/RoadMap.jpeg">
+    </div>
+
+    <br>
+
+    <span style="color: #4D8D6E">`1`</span> - Understanding API Spec, and start develop stystem (<span style="color: orange">Development at your side</span>)
+
+    <span style="color: #4D8D6E">`2`</span>  - Test on development app by following Bill24's <a href="https://drive.google.com/drive/folders/12iAOLR4Sb67C5agjm4gQ01yUriNJdoRi?usp=drive_link">scenarios.</a>
+
+    <span style="color: #4D8D6E">`3`</span>  - Pass testing result with <a href="mailto:support@ubill24.com?subject=UAT Sign-off [service name] [Bank Name]&body=Dear Bill24,%0D%0A %0D%0A
+    Greeting from  [Bank name] %0D%0A %0D%0A
+    I am writing to you today to request your sign-off on the User Acceptance Testing (UAT) for the [Service].%0D%0A %0D%0A
+    We have now completed the UAT testing in our environment. The results of the testing are attached to this email.%0D%0A %0D%0A
+    Please review the attached results and let me know if you have any questions or concerns. Once you have approved the results, we can move forward with the deployment of the service. %0D%0A %0D%0A
+    Thank you for your time and consideration
+    ">attach file</a> for sign-off
+
+    <span style="color: #4D8D6E">`4`</span>  - Configure VPN side to side with Bill24 team (VPN <span style="color: orange">not required</span> in testing environment)
+
+    <span style="color: #4D8D6E">`5`</span>  - Testing on production evironment by following Bill24's <a href="https://drive.google.com/drive/folders/12iAOLR4Sb67C5agjm4gQ01yUriNJdoRi?usp=drive_link">scenarios.</a>
+
+    <span style="color: #4D8D6E">`6`</span>  - Pass testing result with <a href="mailto:support@ubill24.com?subject=Production Sign-off [service name] [Bank Name]&body=Dear Bill24,%0D%0A %0D%0A
+    Greeting from  [Bank name]%0D%0A %0D%0A
+    I am writing to you today to request your sign-off on the production for the [Service]. %0D%0A %0D%0A
+    We have now completed the production environment. The results of the testing are attached to this email.%0D%0A %0D%0A
+    Please review the attached results and let me know if you have any questions or concerns. Once you have approved the results, we can move forward with the launch of the service to market. %0D%0A %0D%0A
+    Thank you for your time and consideration">attach file</a> for sign-off.
+
+    <span style="color: #4D8D6E">`7`</span>  - Launch service, once you have completed the development of service, you can begin to promote it to potential customers and office <a href="mailto:support@ubill24.com?subject=Notify Launch [service name] [Bank Name]&body=Dear Bill24,%0D%0A %0D%0A
+    Greeting from  [Bank name]%0D%0A %0D%0A
+    I am writing to you today to request a go-live service for the [Service Name] project. %0D%0A %0D%0A
+    We are now ready to launch the service to production.%0D%0A %0D%0A
+    We would like to request your assistance in the following areas: %0D%0A %0D%0A
+    We would like to schedule the go-live date for [Date]. %0D%0A %0D%0A
+    Please let me know if this is possible and if you have any questions. %0D%0A %0D%0A
+    Thank you for your time and consideration">email</a> to Bill24
+
 
 tags:
   - name: Echo
@@ -130,8 +213,6 @@ tags:
     description: Operations about users.
   - name: Tag
     description: This is a tag description.
-  - name: Inquiry
-    description: Balance Inquiry
 
 servers:
   - url: https://{bankapi}
@@ -157,7 +238,7 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: http://example.com/api/oauth/dialog
+          authorizationUrl: https://bankapi-demo.bill24.net/
           scopes:
             read:users: read users info
             write:users: modify or remove users
@@ -168,3 +249,7 @@ components:
     basic_auth:
       type: http
       scheme: basic
+    BearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
