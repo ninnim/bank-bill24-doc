@@ -1,35 +1,128 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: Example.com
-  termsOfService: https://example.com/terms/
+  title: API for Bank
+  termsOfService: https://bill24.io/en/
   contact:
-    email: contact@example.com
-    url: http://example.com/contact
+    email: support@gmail.com
+    url: http://support.com/contact
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
     url: https://redocly.github.io/openapi-template/logo.png
   description: >
-    This is an **example** API to demonstrate features of the OpenAPI
-    specification.
+ 
 
-    # Introduction
+    # Overview
 
-    This API definition is intended to to be a good starting point for
-    describing your API in [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
+    The **API for Bank** is a cutting-edge web service built for safety and efficiency. Its primary purpose is to assist banks in seamlessly handling bill payments. 
+    This service acts as a vital link, connecting banks and their customers to diverse bill payment options all within a user-friendly platform.
 
-    It also demonstrates features of the
-    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-    and the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-    the standard OpenAPI syntax, we use a few 
-    [vendor extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+    To begin using the API, developers are required to register and obtain an authorization token. This token is essential for accessing and leveraging the API's capabilities.
 
-    # OpenAPI Specification
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <p style="font-weight: bold; font-size: 30px;">Banks and FIs using Bill24</p>
+    </div>
 
-    fdf
+    
+    <a href="https://www.ababank.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/ABA.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.acledabank.com.kh/kh/eng/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/AC.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://asiaweiluy.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/ACE.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.amkcambodia.com/en/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/AMK.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.amret.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Amret.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.bicbank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/BIC.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://bredcambodia.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/BRED.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.canadiabank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Canadia.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.cathaybk.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Cathy.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.chipmong.com/en/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/chipmong.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.wownow-kh.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/CoolCash.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.cambodiapostbank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/CPBank.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.emoney.com.kh/">    
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Emoney.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://ftb.com.kh/en/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/FTB.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.hatthabank.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Hatta.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.kbprasacbank.com.kh/en/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/KB_Prasac.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://kesspay.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Kess_Innovation Plc.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.lolc.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/LOLC.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+
+    <a href="https://www.sbilhbank.com.kh/en/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Lyhour.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.maybank2u.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/May_Bank.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://mohanokormfi.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Mohanokor.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.phillipbank.com.kh/en">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Phillip.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.pipay.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Pipay.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.princebank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Prince.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.ppcbank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/PPCbank.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.shinhan.com.kh/en">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Shinhan.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://tangkungpay.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Tang_Kung_Pay.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.truemoney.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/True_money.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.vattanacbank.com/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Vattanac.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.wingbank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Wing.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    <a href="https://www.wooribank.com.kh/">
+    <img src="https://b24-upload.s3.ap-southeast-1.amazonaws.com/documents/bankLogo/Woori.png" height="80"  style="margin-top: -5px;  margin-left: -10px; background-color: transparent">
+    </a>
+    </div>
+    <hr style="height:0.2px;">
+
 tags:
   - name: Echo
     description: Example echo operations.
