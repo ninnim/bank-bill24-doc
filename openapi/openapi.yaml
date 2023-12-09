@@ -136,22 +136,22 @@ info:
 
     <br>
 
-    <span style="color: #4D8D6E">`1`</span> - User goes to the payment menu in the Bank App and selects a category.
 
+    <span style="color: #4D8D6E">`1`</span> - User goes to the payment menu in the Bank App and selects a category.<br>
 
-    <span style="color: #4D8D6E">`2`</span> - User selects any merchant to make a payment.
+    <span style="color: #4D8D6E">`2`</span> - User selects any merchant to make a payment.<br>
     
 
-    <span style="color: #4D8D6E">`3`</span>  - User inputs the Consumer Code or Bill Code to search for a bill. (<a href="api-4022145">If the consumer edits the amount to pay.
-    </a>)
+    <span style="color: #4D8D6E">`3`</span>  - User inputs the Consumer Code or Bill Code to search for a bill. (<a href="api-4022145">If the consumer edits the amount to pay. </a>)<br>
+    
 
-    <span style="color: #4D8D6E">`4`</span>  - User confirms the information before clicking on the `Confirm Payment` button.
-
-
-    <span style="color: #4D8D6E">`5`</span>  - User enters PIN code
+    <span style="color: #4D8D6E">`4`</span>  - User confirms the information before clicking on the `Confirm Payment` button. <br>
 
 
-    <span style="color: #4D8D6E">`6`</span>  - User can view screen  payment was successful.
+    <span style="color: #4D8D6E">`5`</span>  - User enters PIN code. <br>
+
+
+    <span style="color: #4D8D6E">`6`</span>  - User can view screen  payment was successful. <br>
 
 
     <br> 
@@ -172,7 +172,7 @@ info:
     </div>
 
     <br>
-    
+
     <hr style="height:0.2px;">
 
 
