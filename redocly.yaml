@@ -20,4 +20,5 @@ theme:
         - lang: JavaScript
         - lang: PHP
         - lang: Python
+        - lang: Swift
         - lang: Ruby
